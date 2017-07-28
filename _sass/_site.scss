@@ -171,6 +171,10 @@ body {
     margin-top: 4rem;
   }
 
+  &-image {
+    margin: auto;
+  }
+
 }
 
 /*--------------
@@ -212,6 +216,10 @@ body {
       color: $base-color;
       margin-bottom: .25rem;
       font-size :1rem;
+    }
+
+    &-image {
+      max-width: 60%;
     }
   }
 

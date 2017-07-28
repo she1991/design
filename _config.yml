@@ -3,7 +3,8 @@
 # # # # # # # # # # # # #
 
 # Basic
-name:               "Kiko Plus"
+name:               "Akash Shetye"
+desc:               "Hi! I am a UX designer and HCI grad student based out of Austin, TX. I work as a research assistant at UT's Simulation and Game Applications (SAGA) Lab."
 
 author:
   facebook:         your-id
@@ -88,6 +89,5 @@ defaults:
 gems:
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-admin
 
 exclude:            [vendor]
