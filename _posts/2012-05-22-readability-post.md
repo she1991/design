@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Automated Fat-Finger Testing in Sketch"
+title: "NDC's MapIt"
 description: "Detect dangerously close touch targets and visualize fat-finger error zones in your artboards; with this Sketch plugin. Experimental tooling in design!"
-image: Fatfinger.gif
+image: NDC-Mapit-Poster.png
 date: 2012-05-22
 tags: [Human Factors, Experimental Tooling, Sketch]
 comments: false
@@ -14,8 +14,6 @@ A fat finger does not imply a literal fat finger, but is a term used in the Huma
 ## Human factors
 
 Traditionally human factors and ergonomics have found use in military, consumer hardware or scientific projects; little has been written about their use in modern digital products.
-
-<img class="post-image" src="{{ site.baseurl }}/images/FingerSizes.png" />
 
 This work sheds light on how an interface designed for an average user's fingers may not be usable for a basketball player.
 

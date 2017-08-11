@@ -15,7 +15,7 @@ layout: default
     {% endif %}
     {% endfor %}
   </nav>
-  <img src="{{ site.baseurl }}/images/Portrait.jpg" />
+  <img class="regular-img" src="{{ site.baseurl }}/images/Portrait.jpg" />
   <div class="list-post-desc">
     {{ site.desc }}
   </div>
@@ -26,7 +26,7 @@ layout: default
   <h2>No post found</h2>
 {% else %}
 <div class="list-post-title">
-    # My work <br />
+    Selected Work
 </div>
 <div class="list-post-desc">
     Below is some of my user experience, product design, tooling and visualization work.
@@ -40,8 +40,8 @@ layout: default
     {% else %}
     <a href="{{ post.url | prepend: site.baseurl }}">
     {% endif %}   
-      <div class="list-post-image">
-        <img src="{{ site.baseurl }}/images/{{ post.image }}" />
+      <div>
+        <img class="wide-img" src="{{ site.baseurl }}/images/{{ post.image }}" />
       </div>
       <div class="list-post-title">
         {{ post.title }}

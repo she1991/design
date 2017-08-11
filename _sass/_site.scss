@@ -27,6 +27,32 @@ body {
   }
 }
 
+.wide-img {
+  max-width : 130%;
+  min-width : 130%;
+  margin-left: -15%;
+  box-shadow : 0 20px 40px 0 rgba(0,0,0,.4);
+
+  @media (max-width: 70rem){
+    max-width : 100%;
+    min-width : 100%;
+    margin-left : 0rem;
+  }
+}
+
+.regular-img {
+  max-width : 100%;
+  min-width : 100%;
+  box-shadow : 0 20px 40px 0 rgba(0,0,0,.4);
+}
+
+.full-wide-img {
+  max-width : 100vw;
+  min-width : 100vw;
+  margin-left : calc(50% - 50vw);
+  box-shadow : 0 20px 40px 0 rgba(0,0,0,.4);
+}
+
 
 /*--------------
   Header
@@ -184,12 +210,6 @@ body {
 .list {
   &-post {
     padding: 4% 2%;
-    
-    &:hover {
-      background-color: $background-over-color;
-      border-color: transparent;
-      border-radius: 10px;
-    }
 
     a {
       color: $base-color;
