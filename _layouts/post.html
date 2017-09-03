@@ -1,10 +1,23 @@
 ---
 layout: default
 ---
-<header>
-  <div class="header-small">
-    <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a>
-  </div>
+<header class="header">
+  <nav class="header-title nav-wrapper">
+    <a href="{{ site.url }}{{ site.baseurl }}" class="brand-logo left">{{ site.name }}</a>
+    <ul class="right">
+      {% for nav in site.nav %}
+      {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+      <li><a class="white-text" href="{{ nav.url }}">{{ nav.name }}</a></li>
+      {% else %}
+      <li><a class="white-text" href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+  <!--<img class="regular-img" src="{{ site.baseurl }}/images/Portrait.jpg" />
+  <div class="list-post-desc">
+    {{ site.desc }}
+  </div>-->
 </header>
 <div class="post">
   <div class="post-title">{{ page.title }}</div>

@@ -100,27 +100,10 @@ dl {
 //  Positioning Bullets
 ol, 
 ul {
-  > li {
-    &:before {
-      position: absolute;
-      width: $li-bullets-width;
-      margin-left: -$li-bullets-width;
-      display: inline-block;
-      box-sizing: border-box;
-      text-align: right;
-    }
-  }
 }
 
 // Restyle <ul>
 ul {
-  > li:before {
-    content: "\2022";
-    padding-right: $ul-bullets-right-space;
-    font-family: $ul-bullets-font;
-    font-size: $ul-bullets-font-size;
-    line-height: $ul-bullets-font-line-height;
-  }
 }
 
 // Restyle <ol>
@@ -141,8 +124,8 @@ ol {
 ol, 
 ul {
   > li {
-    margin: 0 auto $li-bottom-space $li-bullets-width;
-    line-height: $li-line-height;
+    /*margin: 0 auto $li-bottom-space $li-bullets-width;*/
+    /*line-height: $li-line-height;*/
     
     > ol,
     > ul {
@@ -156,7 +139,7 @@ li {
   > ul {
     > li {
       font-size: ($li-child-size-ratio * 1em);
-      margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
+      /*margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);*/  
     }
   }
 }

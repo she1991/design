@@ -3,57 +3,77 @@ layout: default
 ---
 
 <header class="header">
-  <div class="header-title">
-    <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
-  </div>
-  <nav class="header-nav">
-    {% for nav in site.nav %}
-    {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-    <a href="{{ nav.url }}">{{ nav.name }}</a>
-    {% else %}
-    <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
-    {% endif %}
-    {% endfor %}
+  <nav class="header-title nav-wrapper">
+    <a href="{{ site.url }}{{ site.baseurl }}" class="brand-logo left">{{ site.name }}</a>
+    <ul class="right">
+      {% for nav in site.nav %}
+      {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+      <li><a class="white-text" href="{{ nav.url }}">{{ nav.name }}</a></li>
+      {% else %}
+      <li><a class="white-text" href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
   </nav>
-  <img class="regular-img" src="{{ site.baseurl }}/images/Portrait.jpg" />
+  <!--<img class="regular-img" src="{{ site.baseurl }}/images/Portrait.jpg" />
   <div class="list-post-desc">
     {{ site.desc }}
-  </div>
+  </div>-->
 </header>
-
+<div class="hero-contents">
+</div>  
+<div class="pitch-area">
+  <div class="pitch-area-title">
+    <!--<a class="call-button btn-floating waves-effect waves-light">-->
+    </a>
+  </div>
+  <div class="pitch-card">
+  <h2>This is Akash.</h2>
+  I am an user experience designer and a design technologist.<br>
+  Human Computer Interaction (HCI) grad @ University of Texas at Austin.<br>
+  User Research and UX @ SAGA Labs.<br>
+  Looking for full time opportunities starting June 2018.<br><br>
+  <a class="waves-effect waves-light btn-large action-button"><b>See my work</b></a>
+  </div>
+  
+</div>
+<div class="slanted-section-banner">
+    <div>Selected Work</div>
+    <div class="banner-desc">
+      Some of my most interesting projects and their stories.
+    </div>
+</div>
 <div class="list">
 {% if site.posts.size == 0 %}
   <h2>No post found</h2>
 {% else %}
-<div class="list-post-title">
-    Selected Work
-</div>
-<div class="list-post-desc">
-    Below is some of my user experience, product design, tooling and visualization work.
-</div>
-<hr />
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <div class="list-post">
-    {% if post.link %}
-    <a href="{{ post.link }}">
-    {% else %}
-    <a href="{{ post.url | prepend: site.baseurl }}">
-    {% endif %}   
-      <div>
-        <img class="wide-img" src="{{ site.baseurl }}/images/{{ post.image }}" />
+  <div class="list-post">  
+      <div class="z-depth-2">
+        <img class="wide-img" src="{{ site.url }}{{ site.baseurl }}/images/{{ post.image }}" />
       </div>
-      <div class="list-post-title">
-        {{ post.title }}
-      </div>
-      {% if post.description %}
-      <div class="list-post-desc">
-        {{ post.description }}
+      <div class="post-content-box z-depth-2">
+        <div class="list-post-title">
+          {{ post.title }}
+        </div>
+        {% if post.description %}
+        <div class="list-post-desc">
+          <div class="list-post-subtitle">{{ post.subtitle }}</div>
+          {{ post.description }}
+          {% if post.link %}
+          <a href="{{ post.link }}">
+          {% else %}
+          <a href="{{ post.url | prepend: site.baseurl }}">
+          {% endif %} 
+          <div class="action-target btn">
+            View Project
+          </div>
+          </a>
+        </div>
       </div>
       {% endif %}
-    </a>
-    <hr/>
-
+      <br><br>
   </div>
 {% endfor %}
   <!-- Pagination links -->

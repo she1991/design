@@ -3,7 +3,7 @@
 # # # # # # # # # # # # #
 
 # Basic
-name:               "Akash Shetye"
+name:               "Akash"
 desc:               "Hi! I am a UX designer and HCI grad student based out of Austin, TX. I work as a research assistant at UT's Simulation and Game Applications (SAGA) Lab."
 
 author:
@@ -36,9 +36,9 @@ disqus:
   id:               "kiko-plus"
 
 # URL
-url:                "https://AWEEKJ.github.io" # the base hostname & protocol for your site
+url:                "https://akash.me" # the base hostname & protocol for your site
 # url:                "http://localhost:4000" # use this url when you develop
-baseurl:            "/Kiko-plus" # the subpath of your site, e.g. /blog
+baseurl:            "/" # the subpath of your site, e.g. /blog
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -58,11 +58,11 @@ kramdown:
 nav:
   - name:           "About"
     url:            "/about"
-  - name:           "Archive"
+  - name:           "Projects"
     url:            "/archive"
-  - name:           "Tags"
-    url:            "/tags"
-  - name:           "Github"
+  - name:           "Resume"
+    url:            "/resume"
+  - name:           "Contact"
     url:            "https://github.com/AWEEKJ/Kiko-plus"
 
 # Sass
