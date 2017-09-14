@@ -2,7 +2,7 @@
 layout: default
 ---
 <header class="header">
-  <nav class="header-title nav-wrapper">
+  <nav class="header-title header-post-title nav-wrapper">
     <a href="{{ site.url }}{{ site.baseurl }}" class="brand-logo left">{{ site.name }}</a>
     <ul class="right">
       {% for nav in site.nav %}
@@ -19,7 +19,9 @@ layout: default
     {{ site.desc }}
   </div>-->
 </header>
+<div class="body-cover"></div>
 <div class="post">
+  <img class="wide-img" src="{{ site.url }}{{ site.baseurl }}/images/{{ page.image }}"></img>
   <div class="post-title">{{ page.title }}</div>
   <div class="post-tag">
     <ul>

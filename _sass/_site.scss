@@ -20,6 +20,16 @@ body {
   background-color: #212121;
 }
 
+.body-cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  z-index: -1;
+}
+
 .content-container {
   max-width: 48rem;
   /*padding: 5rem 1rem;*/
@@ -79,7 +89,7 @@ body {
   background-color: #00BFA5;
   text-align: center;
   font-size: 3rem;
-  padding-top: 20px;
+  padding-top: 3.5rem;
   color: #FFFFFF;
 }
 
@@ -135,6 +145,13 @@ body {
   background-color: rgba(0,0,0,0.5);
   margin-top: -45vh;
   margin-left: calc(50% - 50vw);
+  @media (max-width: 70rem){
+    max-width : 100vw;
+    min-width : 100vw;
+    max-height: 100vh;
+    min-height: 100vh;
+    margin-top : -100vh;
+  }
 }
 
 .pitch-area-title {
@@ -157,6 +174,9 @@ body {
 
 .brand-logo {
   font-family: 'Bungee Shade', cursive;
+  @media (max-width: 70rem){
+    visibility: hidden;
+  }
 }
 
 .pitch-card {
@@ -190,10 +210,11 @@ body {
     line-height: 1.2em;
     font-weight: 600;*/
     padding-left: 1em;
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0;
-    background-color: rgba(0,0,0,0.2)!important;
+    background-color: rgba(0,0,0,0.5)!important;
+    z-index: 99;
     a {
       color: $base-color;
       &:hover,
@@ -206,6 +227,10 @@ body {
       color: $oc-gray-5;
     }
 
+  }
+
+  &-post-title {
+    background-color: #00BFA5!important;
   }
 
   &-nav {
@@ -262,6 +287,12 @@ body {
   Post
   -------------- */
 .post {
+  
+  padding-top: calc( 64px + 2rem);
+  padding-bottom: 3rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: #ffffff;
 
   &-title {
     margin-top: 0rem;
@@ -532,6 +563,16 @@ body {
       }
     }
   }
+}
+
+.about-me {
+  background-color: #FFFFFF;
+  z-index: -2;
+  min-height: 300px;
+  position: relative;
+  padding-top: 300px;
+  padding-bottom: 2rem;
+  font-size: 1.1rem;
 }
 
 

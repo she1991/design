@@ -57,13 +57,13 @@ kramdown:
 # Navigation
 nav:
   - name:           "About"
-    url:            "/about"
+    url:            "#about"
   - name:           "Projects"
-    url:            "/archive"
+    url:            "#projects"
   - name:           "Resume"
-    url:            "/resume"
+    url:            "resume"
   - name:           "Contact"
-    url:            "https://github.com/AWEEKJ/Kiko-plus"
+    url:            "#contact"
 
 # Sass
 sass:
